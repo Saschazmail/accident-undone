@@ -21,14 +21,6 @@
   "description": "National accident services company helping people immediately after a car accident — transportation, medical referrals, and attorney matching.",
   "url": "https://www.accidentundone.com",
   "telephone": "+18558673460",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "6248 Starflare St",
-    "addressLocality": "Las Vegas",
-    "addressRegion": "NV",
-    "postalCode": "89148",
-    "addressCountry": "US"
-  },
   "openingHours": "Mo-Su 00:00-23:59",
   "priceRange": "Free",
   "areaServed": {"@type": "Country", "name": "United States"}
@@ -127,7 +119,8 @@ section{padding:96px 48px;position:relative;z-index:1}
 .service-card:hover{background:var(--charcoal-light)}
 .service-card:hover::before{transform:scaleX(1)}
 .service-num{font-family:'Space Mono',monospace;font-size:11px;color:var(--orange);margin-bottom:20px;letter-spacing:0.2em}
-.service-icon{width:32px;height:32px;margin-bottom:16px;display:block}
+.service-icon{width:52px;height:52px;background:rgba(255,107,53,0.08);border:1px solid rgba(255,107,53,0.2);border-radius:4px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;transition:all 0.3s}
+.service-card:hover .service-icon{background:rgba(255,107,53,0.15);border-color:rgba(255,107,53,0.4)}
 .service-title{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:var(--white);margin-bottom:10px}
 .service-desc{font-size:13px;line-height:1.75;color:var(--white-muted)}
 .service-sub{margin-top:16px;display:flex;flex-direction:column;gap:6px}
@@ -259,36 +252,11 @@ footer{background:rgba(20,20,20,0.98);border-top:1px solid var(--white-subtle);p
 
 <!-- TRUST BAR -->
 <div class="trust-bar">
-  <div class="trust-item">
-    <span class="trust-icon">
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 1L3 9h5l-1 6 6-8H8L9 1z" stroke="#FF6B35" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/></svg>
-    </span>
-    <span class="trust-text">Free Service</span>
-  </div>
-  <div class="trust-item">
-    <span class="trust-icon">
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="6.5" stroke="#FF6B35" stroke-width="1.5"/><path d="M8 4.5V8.5l2.5 2" stroke="#FF6B35" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </span>
-    <span class="trust-text">24/7 Available</span>
-  </div>
-  <div class="trust-item">
-    <span class="trust-icon">
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="6.5" stroke="#FF6B35" stroke-width="1.5"/><path d="M8 1.5c-2 2-3 4-3 6.5s1 4.5 3 6.5" stroke="#FF6B35" stroke-width="1.25" stroke-linecap="round"/><path d="M8 1.5c2 2 3 4 3 6.5s-1 4.5-3 6.5" stroke="#FF6B35" stroke-width="1.25" stroke-linecap="round"/><line x1="1.5" y1="8" x2="14.5" y2="8" stroke="#FF6B35" stroke-width="1.25" stroke-linecap="round"/></svg>
-    </span>
-    <span class="trust-text">Nationwide</span>
-  </div>
-  <div class="trust-item">
-    <span class="trust-icon">
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 8l4 4 7-7" stroke="#FF6B35" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </span>
-    <span class="trust-text">No Obligation</span>
-  </div>
-  <div class="trust-item">
-    <span class="trust-icon">
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="8" y1="1.5" x2="8" y2="14.5" stroke="#FF6B35" stroke-width="1.5" stroke-linecap="round"/><line x1="4" y1="14.5" x2="12" y2="14.5" stroke="#FF6B35" stroke-width="1.5" stroke-linecap="round"/><line x1="3" y1="3.5" x2="13" y2="3.5" stroke="#FF6B35" stroke-width="1.5" stroke-linecap="round"/><path d="M3 3.5L1 8h4L3 3.5z" stroke="#FF6B35" stroke-width="1.25" stroke-linejoin="round"/><path d="M13 3.5L11 8h4l-2-4.5z" stroke="#FF6B35" stroke-width="1.25" stroke-linejoin="round"/></svg>
-    </span>
-    <span class="trust-text">Vetted Attorneys</span>
-  </div>
+  <div class="trust-item"><span class="trust-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M9 1L3 9h5l-1 6 6-8H8L9 1z" stroke="#FF6B35" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/></svg></span><span class="trust-text">Free Service</span></div>
+  <div class="trust-item"><span class="trust-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="#FF6B35" stroke-width="1.5"/><path d="M8 4.5V8.5l2.5 2" stroke="#FF6B35" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="trust-text">24/7 Available</span></div>
+  <div class="trust-item"><span class="trust-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="#FF6B35" stroke-width="1.5"/><path d="M8 1.5c-2 2-3 4-3 6.5s1 4.5 3 6.5" stroke="#FF6B35" stroke-width="1.25" stroke-linecap="round"/><path d="M8 1.5c2 2 3 4 3 6.5s-1 4.5-3 6.5" stroke="#FF6B35" stroke-width="1.25" stroke-linecap="round"/><line x1="1.5" y1="8" x2="14.5" y2="8" stroke="#FF6B35" stroke-width="1.25" stroke-linecap="round"/></svg></span><span class="trust-text">Nationwide</span></div>
+  <div class="trust-item"><span class="trust-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2.5 8l4 4 7-7" stroke="#FF6B35" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="trust-text">No Obligation</span></div>
+  <div class="trust-item"><span class="trust-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><line x1="8" y1="1.5" x2="8" y2="14.5" stroke="#FF6B35" stroke-width="1.5" stroke-linecap="round"/><line x1="4" y1="14.5" x2="12" y2="14.5" stroke="#FF6B35" stroke-width="1.5" stroke-linecap="round"/><line x1="3" y1="3.5" x2="13" y2="3.5" stroke="#FF6B35" stroke-width="1.5" stroke-linecap="round"/><path d="M3 3.5L1 8h4L3 3.5z" stroke="#FF6B35" stroke-width="1.25" stroke-linejoin="round"/><path d="M13 3.5L11 8h4l-2-4.5z" stroke="#FF6B35" stroke-width="1.25" stroke-linejoin="round"/></svg></span><span class="trust-text">Vetted Attorneys</span></div>
 </div>
 
 <!-- PROMISE -->
@@ -298,7 +266,7 @@ footer{background:rgba(20,20,20,0.98);border-top:1px solid var(--white-subtle);p
     <h2 class="section-title">One call.<br><span>Everything handled.</span></h2>
     <div class="orange-line"></div>
     <div class="promise-block">
-      <div class="promise-quote">After an accident, you shouldn't have to figure out <span>what to do next.</span> That's exactly what we're here for. One call connects you to everything you need — work hard to make it feel like it never happened.</div>
+      <div class="promise-quote">After an accident, you shouldn't have to figure out <span>what to do next.</span> That's exactly what we're here for. We work hard to make it feel like it <span>never happened.</span></div>
       <div class="promise-attr">— The Accident Undone Promise</div>
     </div>
   </div>
@@ -315,13 +283,14 @@ footer{background:rgba(20,20,20,0.98);border-top:1px solid var(--white-subtle);p
       <div class="service-card">
         <div class="service-num">01</div>
         <div class="service-icon">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M2 21V14l3-6h16l3 6v7H2z" stroke="#FF6B35" stroke-width="1.75" stroke-linejoin="round"/>
-            <path d="M24 15h5v6h-5v-6z" stroke="#FF6B35" stroke-width="1.75" stroke-linejoin="round"/>
-            <circle cx="8" cy="23" r="3" stroke="#FF6B35" stroke-width="1.75"/>
-            <circle cx="20" cy="23" r="3" stroke="#FF6B35" stroke-width="1.75"/>
-            <path d="M2 17h22" stroke="#FF6B35" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M13 8v9" stroke="#FF6B35" stroke-width="1.5" stroke-linecap="round"/>
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 24V14C4 12.9 4.9 12 6 12H26L32 18V24" stroke="#FF6B35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="10" cy="25" r="3" stroke="#FF6B35" stroke-width="2"/>
+            <circle cx="26" cy="25" r="3" stroke="#FF6B35" stroke-width="2"/>
+            <path d="M13 25H23" stroke="#FF6B35" stroke-width="2" stroke-linecap="round"/>
+            <path d="M4 18H26" stroke="#FF6B35" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M14 12V18" stroke="#FF6B35" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M20 12V18" stroke="#FF6B35" stroke-width="1.5" stroke-linecap="round"/>
           </svg>
         </div>
         <div class="service-title">Transportation</div>
@@ -329,16 +298,19 @@ footer{background:rgba(20,20,20,0.98);border-top:1px solid var(--white-subtle);p
         <div class="service-sub">
           <span class="service-sub-item">Rental Car Coordination</span>
           <span class="service-sub-item">Uber / Lyft Rideshare</span>
-          <span class="service-sub-item">Autonomous — Zoox &amp; Vay</span>
+          <span class="service-sub-item">Autonomous — Zoox & Vay</span>
         </div>
       </div>
 
       <div class="service-card">
         <div class="service-num">02</div>
         <div class="service-icon">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20.5 3a7.5 7.5 0 0 0-7.4 8.8L3.5 21.4a2.5 2.5 0 1 0 3.5 3.5l9.7-9.6A7.5 7.5 0 1 0 20.5 3z" stroke="#FF6B35" stroke-width="1.75" stroke-linejoin="round"/>
-            <path d="M20.5 3v5l3 3" stroke="#FF6B35" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 4L22 8H30V28H6V8H14L18 4Z" stroke="#FF6B35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 16H24" stroke="#FF6B35" stroke-width="2" stroke-linecap="round"/>
+            <path d="M12 21H20" stroke="#FF6B35" stroke-width="2" stroke-linecap="round"/>
+            <path d="M24 21L26 19L28 21" stroke="#FF6B35" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="26" cy="24" r="2" stroke="#FF6B35" stroke-width="1.5"/>
           </svg>
         </div>
         <div class="service-title">Body Shop</div>
@@ -348,9 +320,11 @@ footer{background:rgba(20,20,20,0.98);border-top:1px solid var(--white-subtle);p
       <div class="service-card">
         <div class="service-num">03</div>
         <div class="service-icon">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="13" y="3" width="6" height="26" rx="1" stroke="#FF6B35" stroke-width="1.75"/>
-            <rect x="3" y="13" width="26" height="6" rx="1" stroke="#FF6B35" stroke-width="1.75"/>
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 4C10.268 4 4 10.268 4 18C4 25.732 10.268 32 18 32C25.732 32 32 25.732 32 18C32 10.268 25.732 4 18 4Z" stroke="#FF6B35" stroke-width="2"/>
+            <path d="M18 11V18L22 22" stroke="#FF6B35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15 18H21" stroke="#FF6B35" stroke-width="2" stroke-linecap="round"/>
+            <path d="M18 15V21" stroke="#FF6B35" stroke-width="2" stroke-linecap="round"/>
           </svg>
         </div>
         <div class="service-title">Medical Referrals</div>
@@ -360,12 +334,10 @@ footer{background:rgba(20,20,20,0.98);border-top:1px solid var(--white-subtle);p
       <div class="service-card">
         <div class="service-num">04</div>
         <div class="service-icon">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <line x1="16" y1="3" x2="16" y2="29" stroke="#FF6B35" stroke-width="1.75" stroke-linecap="round"/>
-            <line x1="8" y1="29" x2="24" y2="29" stroke="#FF6B35" stroke-width="1.75" stroke-linecap="round"/>
-            <line x1="6" y1="6" x2="26" y2="6" stroke="#FF6B35" stroke-width="1.75" stroke-linecap="round"/>
-            <path d="M6 6L2 14h8L6 6z" stroke="#FF6B35" stroke-width="1.75" stroke-linejoin="round"/>
-            <path d="M26 6l-4 8h8l-4-8z" stroke="#FF6B35" stroke-width="1.75" stroke-linejoin="round"/>
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 4L20.5 10.5H28L22 14.5L24.5 21L18 17L11.5 21L14 14.5L8 10.5H15.5L18 4Z" stroke="#FF6B35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10 26H26" stroke="#FF6B35" stroke-width="2" stroke-linecap="round"/>
+            <path d="M12 30H24" stroke="#FF6B35" stroke-width="2" stroke-linecap="round"/>
           </svg>
         </div>
         <div class="service-title">Attorney Matching</div>
@@ -375,12 +347,13 @@ footer{background:rgba(20,20,20,0.98);border-top:1px solid var(--white-subtle);p
       <div class="service-card">
         <div class="service-num">05</div>
         <div class="service-icon">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="6" y="5" width="20" height="24" rx="2" stroke="#FF6B35" stroke-width="1.75"/>
-            <path d="M12 5V3h8v2" stroke="#FF6B35" stroke-width="1.75" stroke-linejoin="round"/>
-            <line x1="10" y1="13" x2="22" y2="13" stroke="#FF6B35" stroke-width="1.5" stroke-linecap="round"/>
-            <line x1="10" y1="18" x2="22" y2="18" stroke="#FF6B35" stroke-width="1.5" stroke-linecap="round"/>
-            <line x1="10" y1="23" x2="17" y2="23" stroke="#FF6B35" stroke-width="1.5" stroke-linecap="round"/>
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="4" width="20" height="26" rx="2" stroke="#FF6B35" stroke-width="2"/>
+            <path d="M10 12H22" stroke="#FF6B35" stroke-width="2" stroke-linecap="round"/>
+            <path d="M10 17H22" stroke="#FF6B35" stroke-width="2" stroke-linecap="round"/>
+            <path d="M10 22H16" stroke="#FF6B35" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="27" cy="27" r="5" fill="#2C2C2C" stroke="#FF6B35" stroke-width="2"/>
+            <path d="M25 27L26.5 28.5L29 26" stroke="#FF6B35" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
         <div class="service-title">Process Guidance</div>
@@ -390,12 +363,11 @@ footer{background:rgba(20,20,20,0.98);border-top:1px solid var(--white-subtle);p
       <div class="service-card">
         <div class="service-num">06</div>
         <div class="service-icon">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="16" cy="16" r="13" stroke="#FF6B35" stroke-width="1.75"/>
-            <path d="M16 3c-4 4-6.5 8-6.5 13s2.5 9 6.5 13" stroke="#FF6B35" stroke-width="1.75" stroke-linecap="round"/>
-            <path d="M16 3c4 4 6.5 8 6.5 13s-2.5 9-6.5 13" stroke="#FF6B35" stroke-width="1.75" stroke-linecap="round"/>
-            <line x1="3" y1="16" x2="29" y2="16" stroke="#FF6B35" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M4 10h24M4 22h24" stroke="#FF6B35" stroke-width="1.25" stroke-linecap="round"/>
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="18" cy="18" r="14" stroke="#FF6B35" stroke-width="2"/>
+            <path d="M4 18H32" stroke="#FF6B35" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M18 4C18 4 12 10 12 18C12 26 18 32 18 32" stroke="#FF6B35" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M18 4C18 4 24 10 24 18C24 26 18 32 18 32" stroke="#FF6B35" stroke-width="1.5" stroke-linecap="round"/>
           </svg>
         </div>
         <div class="service-title">Multilingual Support</div>
@@ -421,8 +393,8 @@ footer{background:rgba(20,20,20,0.98);border-top:1px solid var(--white-subtle);p
       <div class="step">
         <div class="step-num">01</div>
         <div class="step-icon">
-          <svg width="36" height="36" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 3h8l3 7-4 2.5a17 17 0 0 0 6.5 6.5L22 15l7 3v8a2 2 0 0 1-2 2C10 28 4 12 4 5a2 2 0 0 1 2-2z" stroke="#FF6B35" stroke-width="1.75" stroke-linejoin="round"/>
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 6C6 6 8 4 12 5C14 8 13 11 13 11C13 11 11 12 10 14C12 16 16 20 18 22C20 21 21 19 21 19C21 19 24 18 27 20C28 24 26 26 26 26C14 30 2 18 6 6Z" stroke="#FF6B35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
         <div class="step-title">One Call</div>
@@ -432,9 +404,13 @@ footer{background:rgba(20,20,20,0.98);border-top:1px solid var(--white-subtle);p
       <div class="step">
         <div class="step-num">02</div>
         <div class="step-icon">
-          <svg width="36" height="36" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="16" cy="16" r="4" stroke="#FF6B35" stroke-width="1.75"/>
-            <path d="M16 2v4M16 26v4M2 16h4M26 16h4M5.6 5.6l2.8 2.8M23.6 23.6l2.8 2.8M26.4 5.6l-2.8 2.8M8.4 23.6l-2.8 2.8" stroke="#FF6B35" stroke-width="1.75" stroke-linecap="round"/>
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="16" cy="16" r="12" stroke="#FF6B35" stroke-width="2"/>
+            <path d="M16 10V16L20 20" stroke="#FF6B35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8 6L6 4" stroke="#FF6B35" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M24 6L26 4" stroke="#FF6B35" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M4 16H2" stroke="#FF6B35" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M30 16H28" stroke="#FF6B35" stroke-width="1.5" stroke-linecap="round"/>
           </svg>
         </div>
         <div class="step-title">We Handle Everything</div>
@@ -444,9 +420,9 @@ footer{background:rgba(20,20,20,0.98);border-top:1px solid var(--white-subtle);p
       <div class="step">
         <div class="step-num">03</div>
         <div class="step-icon">
-          <svg width="36" height="36" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="16" cy="16" r="13" stroke="#FF6B35" stroke-width="1.75"/>
-            <path d="M9 16l5 5 9-10" stroke="#FF6B35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="16" cy="16" r="12" stroke="#FF6B35" stroke-width="2"/>
+            <path d="M10 16L14 20L22 12" stroke="#FF6B35" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
         <div class="step-title">Consider It Erased</div>
@@ -479,7 +455,7 @@ footer{background:rgba(20,20,20,0.98);border-top:1px solid var(--white-subtle);p
         <ul class="why-list">
           <li>We are compensated by our partners — never by you</li>
           <li>No pressure, no obligation, no strings attached</li>
-          <li>We stay with you work hard to make it feel like it never happened</li>
+          <li>We work hard to make it feel like it never happened</li>
           <li>We work with vetted professionals only — no surprises</li>
           <li>Available in every city we serve, 24 hours a day</li>
         </ul>
@@ -538,29 +514,15 @@ footer{background:rgba(20,20,20,0.98);border-top:1px solid var(--white-subtle);p
         <p style="font-size:12px;color:var(--white-muted);line-height:1.7;">Our service is completely free to you. We are compensated by our partner network — never by accident victims. No obligation. No pressure. Just help.</p>
         <div class="contact-details">
           <div class="contact-detail">
-            <div class="detail-icon">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 2h5l2 4.5-2.5 1.5a10.5 10.5 0 0 0 3.5 3.5L13.5 9 18 11v5a1.5 1.5 0 0 1-1.5 1.5C5.5 17.5 2.5 7 2.5 3.5A1.5 1.5 0 0 1 4 2z" stroke="#FF6B35" stroke-width="1.5" stroke-linejoin="round"/>
-              </svg>
-            </div>
+            <div class="detail-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 2h5l2 4.5-2.5 1.5a10.5 10.5 0 0 0 3.5 3.5L13.5 9 18 11v5a1.5 1.5 0 0 1-1.5 1.5C5.5 17.5 2.5 7 2.5 3.5A1.5 1.5 0 0 1 4 2z" stroke="#FF6B35" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
             <div class="detail-text"><strong>1-855-REWIND-0</strong><span>Call or text — 24/7</span></div>
           </div>
           <div class="contact-detail">
-            <div class="detail-icon">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="2" y="4.5" width="16" height="11" rx="1.5" stroke="#FF6B35" stroke-width="1.5"/>
-                <path d="M2 6.5l8 5.5 8-5.5" stroke="#FF6B35" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <div class="detail-text"><strong>hello@accidentundone.com</strong><span>Email us anytime</span></div>
+            <div class="detail-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="4.5" width="16" height="11" rx="1.5" stroke="#FF6B35" stroke-width="1.5"/><path d="M2 6.5l8 5.5 8-5.5" stroke="#FF6B35" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="detail-text"><strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9ff7faf3f3f0dffefcfcf6fbfaf1ebeaf1fbf0f1fab1fcf0f2">[email&#160;protected]</a></strong><span>Email us anytime</span></div>
           </div>
           <div class="contact-detail">
-            <div class="detail-icon">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10 1.5a6.5 6.5 0 0 1 6.5 6.5c0 4.5-6.5 10.5-6.5 10.5S3.5 12.5 3.5 8A6.5 6.5 0 0 1 10 1.5z" stroke="#FF6B35" stroke-width="1.5"/>
-                <circle cx="10" cy="8" r="2.25" stroke="#FF6B35" stroke-width="1.5"/>
-              </svg>
-            </div>
+            <div class="detail-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 1.5a6.5 6.5 0 0 1 6.5 6.5c0 4.5-6.5 10.5-6.5 10.5S3.5 12.5 3.5 8A6.5 6.5 0 0 1 10 1.5z" stroke="#FF6B35" stroke-width="1.5"/><circle cx="10" cy="8" r="2.25" stroke="#FF6B35" stroke-width="1.5"/></svg></div>
             <div class="detail-text"><strong>6248 Starflare St, Las Vegas, NV 89148</strong><span>Currently serving Las Vegas, NV · Expanding nationally</span></div>
           </div>
         </div>
@@ -579,7 +541,7 @@ footer{background:rgba(20,20,20,0.98);border-top:1px solid var(--white-subtle);p
               <option>Truck / commercial vehicle</option>
               <option>Motorcycle accident</option>
               <option>Rideshare (Uber/Lyft)</option>
-              <option>Slip &amp; fall</option>
+              <option>Slip & fall</option>
               <option>Pedestrian accident</option>
               <option>Casino / hotel injury</option>
               <option>Wrongful death</option>
@@ -591,12 +553,7 @@ footer{background:rgba(20,20,20,0.98);border-top:1px solid var(--white-subtle);p
           <button class="form-submit" onclick="submitForm()">Get Help Now — It's Free →</button>
         </div>
         <div class="form-confirm" id="formConfirm">
-          <div style="display:flex;justify-content:center;margin-bottom:16px;">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="24" cy="24" r="20" stroke="#FF6B35" stroke-width="2.5"/>
-              <path d="M14 24l7 7 13-14" stroke="#FF6B35" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
+          <div style="display:flex;justify-content:center;margin-bottom:16px;"><svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" stroke="#FF6B35" stroke-width="2.5"/><path d="M14 24l7 7 13-14" stroke="#FF6B35" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <h3>We've Got You</h3>
           <p>We received your information and will reach out within minutes. If you need immediate help call <strong style="color:var(--orange)">1-855-REWIND-0</strong> right now — we answer 24/7.</p>
         </div>
@@ -616,7 +573,7 @@ footer{background:rgba(20,20,20,0.98);border-top:1px solid var(--white-subtle);p
   <a href="tel:18558673460" class="footer-contact">1-855-REWIND-0</a>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 window.addEventListener('scroll',()=>{
   document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>40);
 });
@@ -632,10 +589,4 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
 function submitForm(){
   const fname=document.getElementById('fname').value;
   const phone=document.getElementById('phone').value;
-  if(!fname||!phone){alert('Please provide your name and phone number.');return;}
-  document.getElementById('contactForm').style.display='none';
-  document.getElementById('formConfirm').style.display='block';
-}
-</script>
-</body>
-</html>
+  
